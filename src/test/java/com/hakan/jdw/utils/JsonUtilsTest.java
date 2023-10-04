@@ -1,7 +1,6 @@
 package com.hakan.jdw.utils;
 
 import com.hakan.jdw.Webhook;
-import com.hakan.jdw.utils.JsonUtils;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 
