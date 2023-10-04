@@ -20,7 +20,6 @@ dependency to your pom.xml or build.gradle file to use it.
 #### Maven
 
 ```xml
-
 <repositories>
     <repository>
         <id>jitpack.io</id>
@@ -29,12 +28,12 @@ dependency to your pom.xml or build.gradle file to use it.
 </repositories>
 
 <dependencies>
-<dependency>
-    <groupId>com.github.hakan-krgn.java-discord-webhook</groupId>
-    <artifactId>java-discord-webhook</artifactId>
-    <version>0.0.1</version>
-    <scope>compile</scope>
-</dependency>
+    <dependency>
+        <groupId>com.github.hakan-krgn.java-discord-webhook</groupId>
+        <artifactId>java-discord-webhook</artifactId>
+        <version>0.0.1</version>
+        <scope>compile</scope>
+    </dependency>
 </dependencies>
 ```
 
