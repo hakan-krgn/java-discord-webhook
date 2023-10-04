@@ -229,6 +229,17 @@ public class Webhook implements BaseObject {
         WebhookUtils.execute(url, this);
     }
 
+    /**
+     * Executes the webhook.
+     * This method will send the webhook to the
+     * channel that you set.
+     *
+     * @param url The url of the webhook.
+     */
+    public void executeAsync(@NotNull String url) {
+        new Thread(() -> this.execute(url)).start();
+    }
+
 
 
     /**
