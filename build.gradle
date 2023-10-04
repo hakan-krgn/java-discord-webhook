@@ -11,8 +11,6 @@ compileJava.options.encoding = 'UTF-8'
 
 repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' }
-    maven { url 'https://repo.codemc.org/repository/nms/' }
 }
 
 dependencies {
