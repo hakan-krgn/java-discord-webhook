@@ -29,7 +29,7 @@ dependency to your pom.xml or build.gradle file to use it.
 
 <dependencies>
     <dependency>
-        <groupId>com.github.hakan-krgn.java-discord-webhook</groupId>
+        <groupId>com.github.hakan-krgn</groupId>
         <artifactId>java-discord-webhook</artifactId>
         <version>0.0.1</version>
         <scope>compile</scope>
@@ -45,7 +45,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.hakan-krgn.java-discord-webhook:java-discord-webhook:0.0.1'
+    implementation 'com.github.hakan-krgn:java-discord-webhook:0.0.1'
 }
 ```
 
