@@ -35,7 +35,7 @@ jobs:
         run: './gradlew test -P webhook.url=${{ secrets.WEBHOOK_URL }}'
 
       - name: 'Build project'
-        run: './gradlew build'
+        run: './gradlew build -x test'
 
       - name: 'Publish project'
         run: './gradlew publishToMavenLocal'
