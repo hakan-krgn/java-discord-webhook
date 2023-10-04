@@ -28,6 +28,17 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
 }
 
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = project.group
+            version = project.version
+            artifactId = project.name
+            from components.java
+        }
+    }
+}
+
 test {
     useJUnitPlatform()
 }
