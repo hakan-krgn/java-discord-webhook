@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group 'com.hakan.jdw'
+version '0.0.1'
+sourceCompatibility = 8
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://repo.codemc.org/repository/nms/' }
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+
+    implementation 'org.json:json:20230618'
+    implementation 'org.jetbrains:annotations:24.0.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+artifacts.archives(tasks.shadowJar)
+
+tasks.jar {
+    enabled = true
+}
+
+tasks.test {
+    systemProperties project.properties.subMap(["webhook.url"])
+}
+
+tasks.shadowJar {
+    archiveFileName.set("${project.name}-${project.version}.jar")
+}
