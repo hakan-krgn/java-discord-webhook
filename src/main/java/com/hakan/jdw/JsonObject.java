@@ -7,7 +7,7 @@ import org.json.JSONObject;
  * Base interface for all webhook objects
  * that can be converted to JSON.
  */
-public interface BaseObject {
+public interface JsonObject {
 
     /**
      * Converts the object to a JSON string.

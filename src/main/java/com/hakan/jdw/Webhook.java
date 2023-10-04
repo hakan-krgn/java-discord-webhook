@@ -14,7 +14,7 @@ import java.util.function.UnaryOperator;
  * You can send a webhook to a specific
  * channel with this class.
  */
-public class Webhook implements BaseObject {
+public class Webhook implements JsonObject {
 
     private String content;
     private String username;

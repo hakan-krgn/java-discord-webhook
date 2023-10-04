@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Represents a webhook author.
  */
-public class WebhookAuthor implements BaseObject {
+public class WebhookAuthor implements JsonObject {
 
     private String url;
     private String name;

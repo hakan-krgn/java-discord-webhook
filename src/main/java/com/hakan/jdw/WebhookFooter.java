@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Represents a webhook footer.
  */
-public class WebhookFooter implements BaseObject {
+public class WebhookFooter implements JsonObject {
 
     private String text;
     private String iconUrl;

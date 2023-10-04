@@ -7,7 +7,7 @@ import org.json.JSONObject;
 /**
  * Represents a webhook thumbnail.
  */
-public class WebhookThumbnail implements BaseObject {
+public class WebhookThumbnail implements JsonObject {
 
     private String url;
 

@@ -18,7 +18,7 @@ import static com.hakan.jdw.utils.WebhookUtils.dateToText;
 /**
  * Represents a webhook embed.
  */
-public class WebhookEmbed implements BaseObject {
+public class WebhookEmbed implements JsonObject {
 
     private String url;
     private String title;

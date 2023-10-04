@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Represents a webhook field.
  */
-public class WebhookField implements BaseObject {
+public class WebhookField implements JsonObject {
 
     private String name;
     private String value;
