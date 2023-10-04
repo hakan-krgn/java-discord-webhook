@@ -32,7 +32,7 @@ jobs:
 
 
       - name: 'Test project'
-        run: './gradlew test -P webhook.url=$WEBHOOK_URL'
+        run: './gradlew test -P webhook.url=${{ secrets.WEBHOOK_URL }}'
 
       - name: 'Build project'
         run: './gradlew build'
