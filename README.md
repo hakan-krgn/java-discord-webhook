@@ -60,23 +60,24 @@ public class ExampleWebhook {
         Webhook webhook = new Webhook.Builder()
                 .username("Hakan")
                 .content("Hello World!")
-                .avatarUrl("https://www.spigotmc.org/data/avatars/l/661/661932.jpg?1586779817")
+                .avatarUrl("https://avatars.githubusercontent.com/u/42969966?v=4")
                 .embed((builder) -> builder
                         .title("Hello World!")
                         .description("Hello World!")
                         .color(new Color(87, 0, 97))
-                        .url("https://www.spigotmc.org/members/hakankargin.661932/")
+                        .url("https://github.com/hakan-krgn")
                         .timestamp(System.currentTimeMillis(), "UTC+3")
                         .author((authorBuilder) -> authorBuilder
                                 .name("Hakan")
-                                .url("https://www.spigotmc.org/members/hakankargin.661932/"))
+                                .url("https://github.com/hakan-krgn")
+                                .iconUrl("https://avatars.githubusercontent.com/u/42969966?v=4"))
                         .footer((footerBuilder) -> footerBuilder
                                 .text("Hello World!")
-                                .iconUrl("https://www.spigotmc.org/data/avatars/l/661/661932.jpg?1586779817"))
+                                .iconUrl("https://avatars.githubusercontent.com/u/42969966?v=4"))
                         .thumbnail((thumbnailBuilder) -> thumbnailBuilder
-                                .url("https://www.spigotmc.org/data/avatars/l/661/661932.jpg?1586779817"))
+                                .url("https://avatars.githubusercontent.com/u/42969966?v=4"))
                         .image((imageBuilder) -> imageBuilder
-                                .url("https://www.spigotmc.org/data/avatars/l/661/661932.jpg?1586779817"))
+                                .url("https://avatars.githubusercontent.com/u/42969966?v=4"))
                         .field((fieldBuilder) -> fieldBuilder
                                 .name("Hello World!")
                                 .value("Hello World!")
