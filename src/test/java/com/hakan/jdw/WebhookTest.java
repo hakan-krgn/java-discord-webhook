@@ -28,34 +28,6 @@ class WebhookTest {
         String webhookUrl = System.getProperty("webhook.url");
 
         Webhook webhook = new Webhook.Builder()
-                .embed((builder) -> builder)
-                .build();
-
-        assertThrows(IOException.class, () -> webhook.execute(webhookUrl));
-    }
-
-    @Test
-    public void webhook_to_json_3() {
-        String webhookUrl = System.getProperty("webhook.url");
-
-        Webhook webhook = new Webhook.Builder()
-                .threadName("Hello World!")
-                .embed((builder) -> builder
-                        .footer((footerBuilder) -> footerBuilder
-                                .text("Hello World!")
-                                .iconUrl("https://www.spigotmc.org/data/avatars/l/661/661932.jpg?1586779817"))
-                        .thumbnail((thumbnailBuilder) -> thumbnailBuilder
-                                .url("https://www.spigotmc.org/data/avatars/l/661/661932.jpg?1586779817")))
-                .build();
-
-        assertThrows(IOException.class, () -> webhook.execute(webhookUrl));
-    }
-
-    @Test
-    public void webhook_to_json_4() {
-        String webhookUrl = System.getProperty("webhook.url");
-
-        Webhook webhook = new Webhook.Builder()
                 .embed((builder) -> builder
                         .color(new Color(87, 0, 97))
                         .footer((footerBuilder) -> footerBuilder
@@ -74,7 +46,7 @@ class WebhookTest {
     }
 
     @Test
-    public void webhook_to_json_5() {
+    public void webhook_to_json_3() {
         String webhookUrl = System.getProperty("webhook.url");
 
         Webhook webhook = new Webhook.Builder()
@@ -98,7 +70,7 @@ class WebhookTest {
     }
 
     @Test
-    public void webhook_to_json_6() {
+    public void webhook_to_json_4() {
         String webhookUrl = System.getProperty("webhook.url");
 
         Webhook webhook = new Webhook.Builder()
@@ -136,5 +108,34 @@ class WebhookTest {
                 .build();
 
         assertDoesNotThrow(() -> webhook.execute(webhookUrl));
+    }
+
+
+    @Test
+    public void webhook_to_json_5() {
+        String webhookUrl = System.getProperty("webhook.url");
+
+        Webhook webhook = new Webhook.Builder()
+                .embed((builder) -> builder)
+                .build();
+
+        assertThrows(IOException.class, () -> webhook.execute(webhookUrl));
+    }
+
+    @Test
+    public void webhook_to_json_6() {
+        String webhookUrl = System.getProperty("webhook.url");
+
+        Webhook webhook = new Webhook.Builder()
+                .threadName("Hello World!")
+                .embed((builder) -> builder
+                        .footer((footerBuilder) -> footerBuilder
+                                .text("Hello World!")
+                                .iconUrl("https://www.spigotmc.org/data/avatars/l/661/661932.jpg?1586779817"))
+                        .thumbnail((thumbnailBuilder) -> thumbnailBuilder
+                                .url("https://www.spigotmc.org/data/avatars/l/661/661932.jpg?1586779817")))
+                .build();
+
+        assertThrows(IOException.class, () -> webhook.execute(webhookUrl));
     }
 }

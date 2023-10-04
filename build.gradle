@@ -50,7 +50,7 @@ tasks.jar {
 }
 
 tasks.test {
-    systemProperties project.properties.subMap(["webhook.url"])
+    systemProperties project.properties.subMap(['webhook.url'])
 }
 
 tasks.shadowJar {
