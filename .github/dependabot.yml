@@ -2,7 +2,5 @@ version: 2
 updates:
   - package-ecosystem: 'gradle'
     directory: '/'
-    ignore:
-      - dependency-name: 'org.spigotmc'
     schedule:
       interval: 'daily'
